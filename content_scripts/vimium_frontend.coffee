@@ -255,6 +255,16 @@ extend window,
     if (urlsplit.length > 3)
       urlsplit = urlsplit.slice(0, Math.max(3, urlsplit.length - count))
       window.location.href = urlsplit.join('/')
+      
+  incrementUrl: (count) ->
+    # currently ignores and strips any query params, and no type checking 
+    url = window.location.href
+    urlsplit = url.split("/")
+    
+    last = urlsplit[urlsplit.length - 1]
+    urlsplit[urlsplit.length - 1] = parseInt(last, 10) + count
+    
+    window.location.href = urlsplit.join('/')
 
   goToRoot: () ->
     window.location.href = window.location.origin
