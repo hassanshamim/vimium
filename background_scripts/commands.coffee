@@ -109,6 +109,7 @@ Commands =
       "openCopiedUrlInCurrentTab",
       "openCopiedUrlInNewTab",
       "goUp",
+      "incrementUrl",
       "goToRoot",
       "enterInsertMode",
       "focusInput",
@@ -159,6 +160,7 @@ Commands =
     "scrollToRight",
     "moveTabToNewWindow",
     "goUp",
+    "incrementUrl",
     "goToRoot",
     "focusInput",
     "LinkHints.activateModeWithQueue",
@@ -200,6 +202,7 @@ defaultKeyMappings =
   "L": "goForward"
   "gu": "goUp"
   "gU": "goToRoot"
+  "++": "incrementUrl"
 
   "gi": "focusInput"
 
@@ -310,6 +313,7 @@ commandDescriptions =
   # Navigating the URL hierarchy
   goUp: ["Go up the URL hierarchy", { passCountToFunction: true }]
   goToRoot: ["Go to root of current URL hierarchy", { passCountToFunction: true }]
+  incrementUrl: ["Increment the final URL resource if integer", { passCountToFunction: true}]
 
   # Manipulating tabs
   nextTab: ["Go one tab right", { background: true }]
